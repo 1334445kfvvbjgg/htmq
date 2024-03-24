@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты</title>
+
+
+  
+  
+
+</body>
+</html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Контакты</h1>
+</header>
+
+<div class="container">
+  <button onclick="showContacts()">Показать контакты</button>
+</div>
+
+<script>
+  function showContacts() {
+    alert('Телефон: +7 7767380010\nEmail: example@example.com\nАдрес: г. Ваш город, Караганда ул. Ваша улица,Бухар жырау 53  Ваш номер 87474752510');
+  }
+</script>
+
+</body>
+</html>
+  <html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вызов официанта</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Вызов официанта</h1>
+</header>
+
+<div class="container">
+  <button onclick="callWaiter()">Вызвать официанта</button>
+</div>
+
+<script>
+  function callWaiter() {
+    alert('Официант вызван. Пожалуйста, подождите.');
+    // Дополнительная логика, например, отправка уведомления на мобильный телефон официанта, может быть добавлена здесь
+  }
+</script>
+
+</body>
+</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поиск продуктов</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #searchResults {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  #searchResults div {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Поиск продуктов</h1>
+
+
+</body>
+</html>
+</header>
+
+<div class="container">
+  <input type="text" id="searchInput" placeholder="Введите название продукта">
+  <button onclick="searchProducts()">Поиск</button>
+
+  <div id="searchResults"></div>
+</div>
+
+<script>
+  const products = [
+    "Пицца", "Салат", "Бургер", "Рыба", "Сок", // Продукты
+    "Пицца Пепперони", "Пицца Маргарита", "Пицца Гавайская", // Виды пиццы
+    "Салат Цезарь", "Салат Греческий", "Салат овощной", // Виды салатов
+    "Рыба лосось", "Рыба тунец", "Рыба форель", // Виды рыбы
+    "Сок апельсиновый", "Сок яблочный", "Сок виноградный" //виды сока
+
+  ];
+
+  
+
+  function searchProducts() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const searchResults = document.getElementById('searchResults');
+    searchResults.innerHTML = '';
+
+    if (searchInput.trim() === '') {
+      searchResults.innerHTML = 'Введите запрос для поиска';
+      return;
+    }
+
+    const matchingProducts = products.filter(product => product.toLowerCase().includes(searchInput));
+    
+    if (matchingProducts.length === 0) {
+      searchResults.innerHTML = 'Нет результатов для вашего запроса';
+    } else {
+      matchingProducts.forEach(product => {
+        searchResults.innerHTML += `<div>${product}</div>`;
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Корзина</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .product {
+    margin-bottom: 10px;
+  }
+
+  .product label {
+    font-weight: bold;
+  }
+
+  .product input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+  }
+
+  .product button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  #cart {
+    margin-top: 20px;
+  }
+
+  #cart-item {
+    margin-bottom: 10px;
+  }
+
+  #total {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Корзина</h1>
+</header>
+
+<div class="container">
+  <div class="product">
+    <label for="item1">Бургер (тг):</label>
+    <input type="number" id="item1" min="0" value="0">
+    <button onclick="addToCart(500)">Добавить в корзину</button>
+  </div>
+
+  <div class="product">
+    <label for="item2">Пицца (тг):</label>
+    <input type="number" id="item2" min="0" value="0">
+    <button onclick="addToCart(750)">Добавить в корзину</button>
+  </div>
+
+  <div class="product">
+    <label for="item3">Салат (тг):</label>
+    <input type="number" id="item3" min="0" value="0">
+    <button onclick="addToCart(1000)">Добавить в корзину</button>
+  </div>
+
+  <div id="cart">
+    <h2>Корзина</h2>
+  </div>
+
+  <div id="total">Общая сумма: 0 тг</div>
+</div>
+
+<script>
+  let totalCost = 0;
+
+  function addToCart(cost) {
+    const quantity1 = parseInt(document.getElementById('item1').value);
+    const quantity2 = parseInt(document.getElementById('item2').value);
+    const quantity3 = parseInt(document.getElementById('item3').value);
+    
+    const subtotal = cost * (quantity1 + quantity2 + quantity3);
+    totalCost += subtotal;
+
+    const cart = document.getElementById('cart');
+    const cartItem = document.createElement('div');
+    cartItem.textContent = `Товары: ${quantity1} шт. (500тг/шт), ${quantity2} шт. (750тг/шт), ${quantity3} шт. (1000тг/шт) - ${subtotal} тг`;
+    cart.appendChild(cartItem);
+
+    document.getElementById('total').textContent = `Общая сумма: ${totalCost} тг`;
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вызов официанта для оплаты счета</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Вызов официанта для оплаты счета</h1>
+</header>
+
+<div class="container">
+  <button onclick="callWaiter()">Вызвать официанта для оплаты счета</button>
+</div>
+
+<script>
+  function callWaiter() {
+    alert('Вызовите официанта для оплаты счета, пожалуйста.');
+    // Дополнительная логика, например, отправка уведомления на мобильный телефон официанта, может быть добавлена здесь
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оплата наличными в тенге</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Оплата наличными в тенге</h1>
+</header>
+
+<div class="container">
+  <form id="cashPaymentForm">
+    <label for="amount">Сумма к оплате (тг):</label>
+    <input type="number" id="amount" min="0" step="100" required>
+    <button type="submit">Оплатить наличными</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById("cashPaymentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const amount = document.getElementById("amount").value;
+    alert(`Оплата ${amount} тенге наличными произведена. Спасибо!`);
+    // Здесь можно добавить дополнительную логику, например, обработку оплаты на сервере
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оплата по карте</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Оплата по карте</h1>
+</header>
+
+<div class="container">
+  <form id="cardPaymentForm">
+    <label for="cardNumber">Номер карты:</label>
+    <input type="text" id="cardNumber" required>
+    
+    <label for="cardholderName">Имя владельца карты:</label>
+    <input type="text" id="cardholderName" required>
+    
+    <label for="expiryMonth">Срок действия (месяц):</label>
+    <select id="expiryMonth" required>
+      <option value="">Выберите месяц</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <!-- Добавьте остальные месяцы по аналогии -->
+    </select>
+
+    <label for="expiryYear">Срок действия (год):</label>
+    <select id="expiryYear" required>
+      <option value="">Выберите год</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <!-- Добавьте остальные годы по аналогии -->
+    </select>
+    
+    <label for="cvv">CVV код:</label>
+    <input type="number" id="cvv" required>
+
+    <button type="submit">Оплатить картой</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById("cardPaymentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const cardNumber = document.getElementById("cardNumber").value;
+    const cardholderName = document.getElementById("cardholderName").value;
+    const expiryMonth = document.getElementById("expiryMonth").value;
+    const expiryYear = document.getElementById("expiryYear").value;
+    const cvv = document.getElementById("cvv").value;
+
+    // Дополнительная логика, например, валидация данных или отправка запроса на сервер для обработки платежа
+    alert(`Оплата картой ${cardNumber} на имя ${cardholderName} успешно произведена. Спасибо!`);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Связаться с техподдержкой</title>
+</head>
+<body>
+
+<h1>Связаться с техподдержкой</h1>
+
+<button onclick="contactSupport()">Связаться с техподдержкой</button>
+
+<script>
+function contactSupport() {
+  // Добавьте здесь код для связи с вашей службой технической поддержки,
+  // например, перенаправление на страницу контактов или открытие формы обратной связи.
+  alert("В течение 10 минут вам ответит тех поддержка ожидайте.");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Выбор десерта</title>
+</head>
+<body>
+
+<h1>Выбор десерта</h1>
+
+<p>Нажмите на кнопку ниже, чтобы выбрать любой десерт:</p>
+
+<ul id="dessertList">
+  <li>Торт "Наполеон"</li>
+  <li>Чизкейк</li>
+  <li>Мороженое</li>
+  <li>Пирожное "Эклер"</li>
+  <li>Пудинг</li>
+  <li>Маффин</li>
+</ul>
+
+<button onclick="selectRandomDessert()">Выбрать десерт</button>
+
+<p id="selectedDessert">Выбранный десерт: </p>
+
+<script>
+function selectRandomDessert() {
+  var dessertList = document.getElementById("dessertList");
+  var desserts = dessertList.getElementsByTagName("li");
+  var randomIndex = Math.floor(Math.random() * desserts.length);
+  var selectedDessert = desserts[randomIndex].textContent;
+  document.getElementById("selectedDessert").textContent = "Выбранный десерт: " + selectedDessert;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Выбор напитка</title>
+</head>
+<body>
+
+<h1>Выбор напитка</h1>
+
+<p>Нажмите на кнопку ниже, чтобы выбрать любой напиток:</p>
+
+<ul id="drinkList">
+  <li>Кофе</li>
+  <li>Чай</li>
+  <li>Сок</li>
+  <li>Газировка</li>
+  <li>Молоко</li>
+  <li>Лимонад</li>
+  <li>Кола</li>
+  <li>фанта</li>
+</ul>
+
+<button onclick="selectRandomDrink()">Выбрать напиток</button>
+
+<p id="selectedDrink">Выбранный напиток: </p>
+
+<script>
+function selectRandomDrink() {
+  var drinkList = document.getElementById("drinkList");
+  var drinks = drinkList.getElementsByTagName("li");
+  var randomIndex = Math.floor(Math.random() * drinks.length);
+  var selectedDrink = drinks[randomIndex].textContent;
+  document.getElementById("selectedDrink").textContent = "Выбранный напиток: " + selectedDrink;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кнопка помощи</title>
+</head>
+<body>
+
+<h1>Кнопка помощи</h1>
+
+<p>Нажмите на кнопку ниже, чтобы запросить помощь:</p>
+
+<button onclick="requestHelp()">Помощь</button>
+
+<script>
+function requestHelp() {
+  // Добавьте здесь код для запроса помощи
+  // Например, открытие окна чата с поддержкой или перенаправление на страницу с контактами
+  alert("Ваш запрос на помощь отправлен.");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Меню всех продуктов</title>
+</head>
+<body>
+
+<h1>Меню всех продуктов</h1>
+
+<ul>
+  <li>Пицца</li>
+  <li>Бургер</li>
+  <li>Салат</li>
+  <li>Паста</li>
+  <li>Рыба</li>
+  <li>Мясо</li>
+  <li>Десерты</li>
+  <li>Напитки</li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Выбор меню</title>
+</head>
+<body>
+
+<h1>Выбор меню</h1>
+
+<button onclick="showMenu('pizza')">Пицца</button>
+<button onclick="showMenu('burger')">Бургер</button>
+<button onclick="showMenu('salad')">Салат</button>
+<button onclick="showMenu('pasta')">Паста</button>
+<button onclick="showMenu('fish')">Рыба</button>
+<button onclick="showMenu('meat')">Мясо</button>
+<button onclick="showMenu('desserts')">Десерты</button>
+<button onclick="showMenu('drinks')">Напитки</button>
+
+<ul id="menuList">
+  <!-- Сюда будет добавлено меню -->
+</ul>
+
+<script>
+function showMenu(menuType) {
+  var menuList = document.getElementById("menuList");
+  menuList.innerHTML = ""; // Очищаем содержимое списка перед добавлением нового меню
+
+  // Добавляем новое меню в список в зависимости от типа меню
+  switch (menuType) {
+    case 'pizza':
+      menuList.innerHTML += "<li>Маргарита</li><li>Пепперони</li><li>Гавайская</li>";
+      break;
+    case 'burger':
+      menuList.innerHTML += "<li>Классический бургер</li><li>Чизбургер</li><li>Вегетарианский бургер</li>";
+      break;
+    case 'salad':
+      menuList.innerHTML += "<li>Цезарь</li><li>Греческий</li><li>Овощной</li>";
+      break;
+    case 'pasta':
+      menuList.innerHTML += "<li>Спагетти болоньезе</li><li>Паста альфредо</li><li>Лазанья</li>";
+      break;
+    case 'fish':
+      menuList.innerHTML += "<li>Лосось</li><li>Тунец</li><li>Форель</li>";
+      break;
+    case 'meat':
+      menuList.innerHTML += "<li>Стейк</li><li>Шашлык</li><li>Котлета</li>";
+      break;
+    case 'desserts':
+      menuList.innerHTML += "<li>Тирамису</li><li>Пирожное</li><li>Мороженое</li>";
+      break;
+    case 'drinks':
+      menuList.innerHTML += "<li>Кола</li><li>Лимонад</li><li>Чай</li>";
+      break;
+    default:
+      menuList.innerHTML = "<li>Меню не найдено</li>";
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Запрос официанта</title>
+</head>
+<body>
+
+<h1>Жалобная книга</h1>
+
+<button onclick="requestWaiter()">Принести жалобную книгу</button>
+
+<script>
+function requestWaiter() {
+  // Здесь может быть ваша логика для запроса официанта
+  alert("Официант, принесите жалобную книгу, пожалуйста!");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Узнать время прибытия курьера</title>
+</head>
+<body>
+
+<h1>Время прибытия курьера</h1>
+
+<button onclick="checkDeliveryTime()">Узнать время прибытия курьера</button>
+
+<script>
+function checkDeliveryTime() {
+  // Здесь может быть ваша логика для запроса времени доставки
+  alert("Курьер прибудет примерно через 30 минут.");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Узнать причину задержки курьера</title>
+</head>
+<body>
+
+<h1>Причина задержки курьера</h1>
+
+<button onclick="checkDelayReason()">Узнать причину задержки курьера</button>
+
+<script>
+function checkDelayReason() {
+  // Здесь может быть ваша логика для запроса причины задержки курьера
+  alert("Курьер задерживается из-за тяжелых погодных условий.");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Связаться с курьером</title>
+</head>
+<body>
+
+<h1>Местоположение курьера</h1>
+
+<button onclick="contactCourier()">Связаться с курьером</button>
+
+<script>
+function contactCourier() {
+  // Здесь может быть ваша логика для запроса местоположения курьера
+  alert("Курьер едет по адресу улица Ленина, дом 10.");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Время работы ресторана</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+
+<h1>Время работы ресторана</h1>
+
+<table>
+  <tr>
+    <th>День недели</th>
+    <th>Время открытия</th>
+    <th>Время закрытия</th>
+  </tr>
+  <tr>
+    <td>Понедельник</td>
+    <td>10:00</td>
+    <td>22:00</td>
+  </tr>
+  <tr>
+    <td>Вторник</td>
+    <td>10:00</td>
+    <td>22:00</td>
+  </tr>
+  <tr>
+    <td>Среда</td>
+    <td>10:00</td>
+    <td>22:00</td>
+  </tr>
+  <tr>
+    <td>Четверг</td>
+    <td>10:00</td>
+    <td>22:00</td>
+  </tr>
+  <tr>
+    <td>Пятница</td>
+    <td>10:00</td>
+    <td>23:00</td>
+  </tr>
+  <tr>
+    <td>Суббота</td>
+    <td>10:00</td>
+    <td>23:00</td>
+  </tr>
+  <tr>
+    <td>Воскресенье</td>
+    <td>12:00</td>
+    <td>20:00</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Карта</title>
+<style>
+  /* Задайте размер карты */
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<h1>Google Карта</h1>
+
+<!-- Здесь будет отображаться карта -->
+<div id="map"></div>
+
+<script>
+// Инициализация карты
+function initMap() {
+  // Установка координат местоположения (Широта и долгота)
+  var myLatLng = {lat: -25.363, lng: 131.044};
+
+  // Создание новой карты
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,  // Установка начального масштаба
+    center: myLatLng  // Установка центра карты
+  });
+
+  // Установка маркера на карте
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Местоположение курьера'  // Всплывающая подсказка при наведении на маркер
+  });
+}
+</script>
+
+<!-- Включение Google Maps API -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=ВАШ_КЛЮЧ_API&callback=initMap">
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бронирование столика</title>
+<style>
+  /* Простой CSS для стилизации */
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Бронирование столика</h1>
+
+<!-- Форма для ввода данных -->
+<form id="reservationForm">
+  <label for="name">Имя:</label>
+  <input type="text" id="name" required><br>
+  <label for="date">Дата:</label>
+  <input type="date" id="date" required><br>
+  <label for="time">Время:</label>
+  <input type="time" id="time" required><br>
+  <button type="submit">Забронировать столик</button>
+</form>
+
+<!-- Контейнер для отображения результатов бронирования -->
+<div id="reservationResult"></div>
+
+<script>
+// Функция для обработки отправки формы
+document.getElementById('reservationForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+  // Получаем данные из формы
+  var name = document.getElementById('name').value;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+
+  // Выводим результат бронирования
+  var reservationResult = document.getElementById('reservationResult');
+  reservationResult.innerHTML = 'Забронирован столик на имя ' + name + ' на ' + date + ' в ' + time + '.';
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="social-icons">
+  <a href="https://www.facebook.com/yourusername" target="_blank">
+    <img src="path/to/facebook-icon.svg" alt="Facebook Icon">
+  </a>
+  <a href="https://www.twitter.com/yourusername" target="_blank">
+    <img src="path/to/twitter-icon.svg" alt="Twitter Icon">
+  </a>
+  <a href="https://www.instagram.com/yourusername" target="_blank">
+    <img src="path/to/instagram-icon.svg" alt="Instagram Icon">
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Button</title>
+<style>
+.button {
+  background-color: #25D366;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<button class="button" onclick="openWhatsApp()">написать ватсп</button>
+
+<script>
+function openWhatsApp() {
+  // Замените "+123456789" на номер WhatsApp, на который нужно отправить сообщение
+  window.open('https://wa.me/+123456789', '_blank');
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<html>
+<head>
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
